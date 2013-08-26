@@ -1,0 +1,42 @@
+
+
+.container-fluid{
+    min-height: 600px;
+}
+
+#news {
+    margin-top: 30px;
+    background: none repeat scroll 0 0 #EBEBEB;
+    border: 1px solid Silver;
+    padding: 10px 10px 0;
+    margin-bottom: 30px;
+}
+
+
+#news dt.first {
+    border-top: medium none;
+}
+
+#news h3 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    color: #808080;
+    line-height: 2;
+}
+
+#news dt {
+    border-top: 1px dotted #787878;
+    font-weight: normal;
+    line-height: 1;
+    padding-top: 6px;
+}
+
+
+#news dd{
+    transition: all 0.1s ease-in 0s;
+}
+#news dd:hover{
+    padding-left:1em;
+    transition: all 0.1s ease-out 0s;
+}
+
+

@@ -1,0 +1,5 @@
+es_AR:
+  RecaptchaField:
+    EMPTY: Por favor, responda el texto de verificación.
+    VALIDSOLUTION: Su Respuesta no coincide con el texto de verificación, intente de nuevo.
+    NORESPONSE: El servicio de texto de verificación no se encuentra disponible, intente mas tarde.

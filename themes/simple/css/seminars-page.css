@@ -1,0 +1,70 @@
+.videos {
+    margin-bottom: 30px;
+}
+
+.video {
+    padding: 3px;
+    position: relative;
+}
+
+.video img {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.video .caption {
+    background: url("../images/icon-play.png") no-repeat scroll 5px 8px rgba(0, 0, 0, 0.8);
+    bottom: 8px;
+    color: #C4C4C4;
+    left: 3px;
+    padding: 7px 5px 6px 25px;
+    transition: all 0.1s ease-in 0s;
+    width: 470px;
+    position: absolute;
+}
+
+.video a img{
+    width: 500px;
+    height: 329px;
+    border: 0 !important;
+}
+
+.video:hover .caption {
+    background: url("../images/icon-play.png") no-repeat scroll 10px 8px #000000;
+    color: #FFFFFF;
+    padding: 7px 5px 6px 30px;
+    transition: all 0.1s ease-out 0s;
+    width: 465px;
+}
+
+.seminar h1{
+    padding: 10px;
+}
+.seminar h1 p{
+    font-size: 30pt;
+}
+
+.seminar-date{
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.seminar .text{
+    margin-top:15px ;
+    font-size: 12pt;
+}
+
+.seminar .title{
+    font-size: 30pt;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text:hover{
+    cursor: pointer;
+}
+
+.seminar-list li{
+    list-style-type: none !important;
+}

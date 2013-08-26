@@ -1,0 +1,35 @@
+es_AR:
+  TrainingDay:
+    Day: Dia
+    StartTime: Inicio
+    EndTime: Fin
+    SINGULARNAME: Dia Entrenamiento
+    PLURALNAME: Dias Entrenamiento
+    Sunday: Domingo
+    Monday: Lunes
+    Tuesday: Martes
+    Wednesday: Miercoles
+    Thursday: Jueves
+    Friday: Viernes
+    Saturday: Sabado
+  TrainingPlace:
+    Name: Nombre
+    Address: Direccion
+    City: Ciudad
+    SINGULARNAME: Lugar Entrenamiento
+    PLURALNAME: Lugares Entrenamiento
+  TrainingClass:
+    When.Name: Cuando
+    Where.Name: Donde
+    Professor.FullName: Sabom
+    SINGULARNAME: Clase Entrenamiento
+    PLURALNAME: Clases Entrenamiento
+    Child: Chicos
+    Adult: Adultos
+  OneTimeTrainingClass:
+    SINGULARNAME: Clase Dan
+    PLURALNAME: Clases Dan
+  Professor:
+    Director: Kwan Yang Nim
+    TechAdviser: Consejero Tecnico
+    Instructor: Sabon Nin
