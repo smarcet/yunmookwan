@@ -16,7 +16,7 @@
                     <a href="https://twitter.com/intent/tweet?hashtags=namsungchoi,yunmookwan,taekwondo&text=%23namsungchoi+Pagina+Oficial+de+Yun+Moo+Kwan&url={$GlobalDomain}" target="_blank">
                         <img src="/{$ThemeDir}/images/icon-twitter.png" width="40" height="40" alt="twitter">
                     </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]={$GlobalDomain}&p[images][0]={$GlobalDomain}{$ThemeDir}/images/logo.png&p[title]=Pagina+Oficial+de+Yun+Moo+Kwan" target="_blank">
+                    <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]={$GlobalDomain}&p[images][0]={$GlobalDomain}/{$ThemeDir}/images/logo.png&p[title]=Pagina+Oficial+de+Yun+Moo+Kwan" target="_blank">
                         <img src="/{$ThemeDir}/images/icon-facebook.png" width="40" height="40" alt="facebook">
                     </a>
                 </div>
