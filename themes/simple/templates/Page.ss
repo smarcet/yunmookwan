@@ -18,7 +18,17 @@ Change it, enhance it and most importantly enjoy it!
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="google-site-verification" content="{$googleVerificationCode}" />
+	<meta name="google-site-verification" content="{$SiteConfig.GoogleVerificationCode}" />
+    <meta property="og:image" content="{$SiteConfigGlobalDomain}/{$ThemeDir}/images/logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="224" />
+    <meta property="og:image:height" content="272" />
+    <meta property="og:title" content="{$Title}" />
+    <meta property="og:url" content="{$SiteConfig.CurrentUrl}" />
+    <meta property="og:description" content="{$Title} &raquo; {$SiteConfig.Title}" />
+    <meta property="fb:admins" content="{$SiteConfig.FacebookUserId}"/>
+    <meta property="fb:app_id" content="{$SiteConfig.FacebookAppId}"/>
+    <meta property="og:type" content="website" />
 	$MetaTags(false)
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,7 +50,7 @@ Change it, enhance it and most importantly enjoy it!
     <script type="text/javascript" src="/{$ThemeDir}/javascript/shadowbox/shadowbox.js"></script>
     <script type="text/javascript">
 	   var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', '{$GoogleAnalitycsAccount}']);
+	  _gaq.push(['_setAccount', '{$SiteConfig.GoogleAnalitycsAccount}']);
 	  _gaq.push(['_trackPageview']);
 	
 	  (function() {
