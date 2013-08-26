@@ -958,6 +958,11 @@ class Director implements TemplateGlobalProvider {
 		return false;
 	}
 
+    public static function GlobalDomain(){
+       global $GlobalDomain;
+       return $GlobalDomain;
+    }
+
 	/**
 	 * @return array Returns an array of strings of the method names of methods on the call that should be exposed
 	 * as global variables in the templates.
@@ -969,6 +974,7 @@ class Director implements TemplateGlobalProvider {
 			'is_ajax',
 			'isAjax' => 'is_ajax',
 			'BaseHref' => 'absoluteBaseURL',    //@deprecated 3.0
+            'GlobalDomain'
 		);
 	}
 
