@@ -8,7 +8,7 @@
         </div>
     <% end_if %>
     <% if $ShowFBComments %>
-    <div class="fb-comments" data-href="{$SiteConfig.GlobalDomain}/{$Top.URLSegment}/instance/{$ID}" data-width="600">
+    <div class="fb-comments" data-href="{$Top.SiteConfig.GlobalDomain}/{$Top.URLSegment}/instance/{$ID}" data-width="600">
     <% end_if %>
 <% end_control %>
 

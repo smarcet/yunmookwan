@@ -992,3 +992,10 @@ hr {
 #header .row-fluid .span10{
     overflow: visible;
 }
+
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{
+   left:0px !important; 
+}
+
+
+
