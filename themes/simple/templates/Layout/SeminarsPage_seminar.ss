@@ -51,7 +51,7 @@
     <% end_if %>
     </div>
     <% if $ShowFBComments %>
-    <div class="fb-comments" data-href="{$BaseHref}{$Top.URLSegment}/instance/{$ID}" data-width="600"></div>
+    <div class="fb-comments" data-href="{$BaseHref}{$Top.URLSegment}/seminar/{$ID}" data-width="600"></div>
      <% end_if %>
 <% end_control %>
 </div>
