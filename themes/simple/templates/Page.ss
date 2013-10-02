@@ -60,6 +60,19 @@ Change it, enhance it and most importantly enjoy it!
 	  })();
 	
 	</script>
+
+    <script type="text/javascript">
+
+        // Used to record outbound links before the browser resets to the new site
+
+        function recordOutboundLink(link, category, action,opt_label) {
+            try {
+                _gaq.push(['._trackEvent', category , action,opt_label ]);
+                setTimeout('document.location = "' + link.href + '"', 100)
+            }catch(err){}
+        }
+
+    </script>
 </head>
 <body class="$ClassName<% if not $Menu(2) %> no-sidebar<% end_if %>">
 <div id="fb-root"></div>
@@ -100,5 +113,20 @@ Change it, enhance it and most importantly enjoy it!
         });
     });
 </script>
+
+<script type="text/javascript">
+    $(document).ready(function($) {
+        $("a").live("click",function(event){
+            var href = $(this).attr("href");
+            var text = $(this).text();
+            recordOutboundLink(this,'Outbound Links',href,text);
+            event.preventDefault();
+            event.stopPropagation()
+            return false;
+        });
+    });
+</script>
+
+
 </body>
 </html>
