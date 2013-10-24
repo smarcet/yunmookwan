@@ -62,6 +62,7 @@ class ContactPage_Controller extends Page_Controller {
         $To = $this->Mailto;
         $Subject = "YUN MOO KWAN - Contacto";    
         $email = new Email($From, $To, $Subject);
+        $email->replyTo($From);
         //set template
         $email->setTemplate('ContactEmail');
         //populate template$body
@@ -69,7 +70,7 @@ class ContactPage_Controller extends Page_Controller {
         //send mail
         $email->send();
         //return to submitted message
-        Director::redirect($this->Link("?success=1"));
+        $this->redirect($this->Link("?success=1"));
     }
     
     public function Success()
