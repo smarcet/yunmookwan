@@ -1,8 +1,9 @@
 <?php
 namespace Composer\Installers;
 
-use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
+use Composer\Package\PackageInterface;
+use Composer\Repository\InstalledRepositoryInterface;
 
 class Installer extends LibraryInstaller
 {
@@ -13,8 +14,10 @@ class Installer extends LibraryInstaller
      */
     private $supportedTypes = array(
         'agl'          => 'AglInstaller',
+        'annotatecms'  => 'AnnotateCmsInstaller',
         'cakephp'      => 'CakePHPInstaller',
         'codeigniter'  => 'CodeIgniterInstaller',
+        'croogo'       => 'CroogoInstaller',
         'drupal'       => 'DrupalInstaller',
         'fuel'         => 'FuelInstaller',
         'joomla'       => 'JoomlaInstaller',
@@ -24,13 +27,16 @@ class Installer extends LibraryInstaller
         'magento'      => 'MagentoInstaller',
         'mako'         => 'MakoInstaller',
         'mediawiki'    => 'MediaWikiInstaller',
+        'modulework'   => 'MODULEWorkInstaller',
+        'oxid'         => 'OxidInstaller',
         'phpbb'        => 'PhpBBInstaller',
         'ppi'          => 'PPIInstaller',
         'silverstripe' => 'SilverStripeInstaller',
         'symfony1'     => 'Symfony1Installer',
         'wordpress'    => 'WordPressInstaller',
         'zend'         => 'ZendInstaller',
-        'typo3-flow'   => 'TYPO3FlowInstaller'
+        'typo3-flow'   => 'TYPO3FlowInstaller',
+        'typo3-cms'    => 'TYPO3CmsInstaller',
     );
 
     /**
@@ -53,6 +59,18 @@ class Installer extends LibraryInstaller
         return $installer->getInstallPath($package, $frameworkType);
     }
 
+    public function uninstall(InstalledRepositoryInterface $repo, PackageInterface $package)
+    {
+        if (!$repo->hasPackage($package)) {
+            throw new \InvalidArgumentException('Package is not installed: '.$package);
+        }
+
+        $repo->removePackage($package);
+
+        $installPath = $this->getInstallPath($package);
+        $this->io->write(sprintf('Deleting %s - %s', $installPath, $this->filesystem->removeDirectory($installPath) ? '<comment>deleted</comment>' : '<error>not deleted</error>'));
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -64,7 +82,8 @@ class Installer extends LibraryInstaller
             return false;
         }
 
-        return preg_match('#' . $frameworkType . '-(\w+)#', $packageType, $matches) === 1;
+        $locationPattern = $this->getLocationPattern($frameworkType);
+        return preg_match('#' . $frameworkType . '-' . $locationPattern . '#', $packageType, $matches) === 1;
     }
 
     /**
@@ -85,5 +104,25 @@ class Installer extends LibraryInstaller
         }
 
         return $frameworkType;
+    }
+
+    /**
+     * Get the second part of the regular expression to check for support of a
+     * package type
+     *
+     * @param  string $frameworkType
+     * @return string
+     */
+    protected function getLocationPattern($frameworkType)
+    {
+        $pattern = false;
+        if (!empty($this->supportedTypes[$frameworkType])) {
+            $frameworkClass = 'Composer\\Installers\\' . $this->supportedTypes[$frameworkType];
+            /** @var BaseInstaller $framework */
+            $framework = new $frameworkClass;
+            $locations = array_keys($framework->getLocations());
+            $pattern = $locations ? '(' . implode('|', $locations) . ')' : false;
+        }
+        return $pattern ? : '(\w+)';
     }
 }

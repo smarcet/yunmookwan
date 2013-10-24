@@ -2,7 +2,7 @@
     <div class="row-fluid">
         <div class="span6">
             <% if DirectorProfessor %>
-            <% control DirectorProfessor %>
+            <% with DirectorProfessor %>
             <div class="row-fluid">
                 <div class="span12">
                     <div class="row-fluid">
@@ -20,10 +20,10 @@
                     <p><strong>Maestro Fundador</strong> : <span class="st"><em>KWANG YANG NIM</em></span>&nbsp;$FullName</p>
                 </div>
             </div>
-            <% end_control %>
+            <% end_with %>
             <% end_if %>
             <% if TechAdviserProfessor %>
-            <% control TechAdviserProfessor %>
+            <% with TechAdviserProfessor %>
             <div class="row-fluid">
                 <div class="span12">
                     <div class="row-fluid">
@@ -41,15 +41,15 @@
                     <p><strong>Direción Técnica</strong>: SABON NIM &nbsp;$FullName - $Graduation DAN</p>
                 </div>
             </div>
-            <% end_control %>
+            <% end_with %>
             <% end_if %>
         </div>
         <div class="span6">
             <div>
                 <% if Headquarter %>
-                <% control Headquarter %>
+                <% with Headquarter %>
                 <a href="#"  map='https://maps.google.com/maps?q={$GoogleMapQuery}&hl=en&ie=UTF8&oq={$GoogleMapQuery}&t=m&z=16&output=embed' title='Sede Central - {$FullAddress}' class="popup-gmaps"><strong>Sede&nbsp;Central:&nbsp;</strong>$FullAddress</a>
-                <% end_control %>
+                <% end_with %>
                 <% end_if %>
             </div>
             <% if News %>
@@ -58,7 +58,7 @@
                 <dl>
                     <% loop News %>
                     <dt <% if First %>class="first"<% end_if %> ></dt>
-                    <dd>$Text</dd>
+                    <dd><a href="{$Link}" class="outbound-link">$Text<a></dd>
                     <% end_loop %>
                 </dl>
             </div>

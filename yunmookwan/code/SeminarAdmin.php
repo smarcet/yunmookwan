@@ -10,5 +10,5 @@
 class SeminarAdmin  extends ModelAdmin  {
     public static $managed_models = array('Seminar');
     static $url_segment = 'seminars';
-    static $menu_title = 'Administracion Seminarios';
+    static $menu_title = 'Seminarios';
 }

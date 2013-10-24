@@ -10,5 +10,5 @@
 class TrainingAdmin  extends ModelAdmin  {
     public static $managed_models = array('TrainingDay','TrainingPlace','TrainingClass','OneTimeTrainingClass','News');
     static $url_segment = 'training';
-    static $menu_title = 'Administracion Practica';
+    static $menu_title = 'Practica';
 }

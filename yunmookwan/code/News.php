@@ -9,7 +9,8 @@
 
 class News extends DataObject{
     public static $db = array(
-        'Text' => 'HTMLText',
+        'Text' => 'Text',
+        'Link' => 'Text',
     );
 
     static $summary_fields = array(

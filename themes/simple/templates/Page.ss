@@ -116,7 +116,7 @@ Change it, enhance it and most importantly enjoy it!
 
 <script type="text/javascript">
     $(document).ready(function($) {
-        $("a").live("click",function(event){
+        $(".outbound-link").live("click",function(event){
             var href = $(this).attr("href");
             var text = $(this).text();
             recordOutboundLink(this,'Outbound Links',href,text);

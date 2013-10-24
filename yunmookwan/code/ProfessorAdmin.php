@@ -10,6 +10,6 @@
 class ProfessorAdmin extends ModelAdmin  {
     public static $managed_models = array('Professor'); // Can manage multiple models
     static $url_segment = 'professors'; // Linked as /admin/professors/
-    static $menu_title = 'Administracion Profesores';
+    static $menu_title = 'Profesores';
 
 }

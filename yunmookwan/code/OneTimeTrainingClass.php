@@ -12,7 +12,8 @@ class OneTimeTrainingClass extends TrainingClass{
     public static $db = array(
         'Active' => 'Boolean',
         'ShowFBComments'=>'Boolean',
-        'Date'=>'Date'
+        'Date'=>'Date',
+        'Briefing'=>'HTMLText'
     );
 
     static $defaults = array('ShowFBComments' => 0);
@@ -31,6 +32,7 @@ class OneTimeTrainingClass extends TrainingClass{
         $fields = parent::getCMSFields();
         $date = DateField::create('Date','Date')->setConfig('showcalendar', true);
         $fields->add($date);
+        $fields->add(new HtmlEditorField("Briefing","Texto"));
         $fields->add(new CheckboxField("ShowFBComments",'Activar Comentarios'));
         $gridFieldConfig = GridFieldConfig_RecordEditor::create();
         $gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));

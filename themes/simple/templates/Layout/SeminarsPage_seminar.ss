@@ -1,6 +1,6 @@
 <div class="seminar">
 
-<% control Result %>
+<% loop Result %>
     <h1>$Title</h1>
     <div class="seminar-date">
         <b>$WhenFull</b>
@@ -51,7 +51,7 @@
     <% end_if %>
     </div>
     <% if $ShowFBComments %>
-    <div class="fb-comments" data-href="{$BaseHref}{$Top.URLSegment}/seminar/{$ID}" data-width="600"></div>
-     <% end_if %>
-<% end_control %>
+        <div class="fb-comments" data-href="{$BaseHref}{$Top.URLSegment}/seminar/{$ID}" data-width="600"></div>
+    <% end_if %>
+<% end_loop %>
 </div>
