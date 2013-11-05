@@ -1,0 +1,30 @@
+.seminar h1{
+    padding: 10px;
+}
+.seminar h1 p{
+    font-size: 30pt;
+}
+
+.seminar-date{
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.seminar .text{
+    margin-top:15px ;
+    font-size: 12pt;
+}
+
+.seminar .title{
+    font-size: 30pt;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text:hover{
+    cursor: pointer;
+}
+
+.seminar-list li{
+    list-style-type: none !important;
+}

@@ -1,0 +1,18 @@
+---
+Name: mysite
+After: 'framework/*','cms/*'
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+SSViewer:
+  theme: 'budokan'
+MySQLDatabase:
+  connection_charset: 'utf8'
+Director:
+  environment_type: 'dev'
+i18n:
+  date_format: 'dd.MM.YYYY'
+  time_format: 'HH:mm'
+SiteTree:
+  nested_urls: 'true'
