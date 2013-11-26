@@ -12,6 +12,17 @@ class Activity extends DataObject {
         'Description' => 'HTMLText'
     );
 
+    function getCMSValidator()
+    {
+        return $this->getValidator();
+    }
+
+    function getValidator()
+    {
+        $validator= new RequiredFields(array('Name'));
+        return $validator;
+    }
+
     static $has_many = array(
         'TrainingClasses' => 'TrainingClass'
     );

@@ -23,6 +23,18 @@ class TrainingPlace extends DataObject {
         'Name'
     );
 
+    function getCMSValidator()
+    {
+        return $this->getValidator();
+    }
+
+    function getValidator()
+    {
+        $validator= new RequiredFields(array('Name','Address','City','Country'));
+        return $validator;
+    }
+
+
     public static $casting = array(
         "FullAddress" => 'Text',
         'GoogleMapQuery'=> 'Text',
@@ -36,9 +48,6 @@ class TrainingPlace extends DataObject {
         return $this->Address.' , '.$this->City.' , '.$this->Country;
     }
 
-    public function getCMSValidator() {
-        return new RequiredFields('Name', 'Address', 'City');
-    }
 
     function fieldLabels($includerelations = true){
         $labels = parent::fieldLabels($includerelations);

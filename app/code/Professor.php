@@ -21,6 +21,18 @@ class Professor extends DataObject{
         'Role'=>"Enum('Director, TechAdviser, Instructor', 'Instructor')",
     );
 
+    function getCMSValidator()
+    {
+        return $this->getValidator();
+    }
+
+    function getValidator()
+    {
+        $validator= new RequiredFields(array('Name','Surname','Graduation','Role'));
+        return $validator;
+    }
+
+
     public static $searchable_fields = array(
         'Name'
     );
@@ -87,10 +99,10 @@ class Professor extends DataObject{
         return $fields;
     }
 
-    public function getProfilePhoto(){
+    public function ProfilePhoto($width='300',$height='250'){
         $img = $this->Photo();
         if(isset($img) && Director::fileExists($img->Filename) && $img->exists()){
-            $img= $img->SetRatioSize(300,250);
+            $img= $img->SetRatioSize($width,$height);
             return "<img alt='{$this->Name}_big_logo' src='{$img->getURL()}' class='big-logo-profile'/>";
         }
         else{

@@ -7,8 +7,8 @@
                 <div class="span12">
                     <div class="row-fluid">
                         <div class="span6">
-                            <a href='{$ProfilePhotoUrl}' rel="shadowbox">
-                                $ProfilePhoto
+                            <a href='{$ProfilePhotoUrl}' rel="shadowbox" title="{$FullName}">
+                                $ProfilePhoto(330,650)
                             </a>
                         </div>
                         <div class="span6">&nbsp;</div>
@@ -16,9 +16,10 @@
                 </div>
             </div>
             <div class="row-fluid">
-                <div class="span12">
-                    <p><strong>Maestro Fundador</strong> : <span class="st"><em>Sensei</em></span>&nbsp;$FullName</p>
+                <div class="span8 professor-label">
+                    <p><strong>Maestro Fundador</strong> : <span class="st"><em>O-Sensei</em></span>&nbsp;$FullName</p>
                 </div>
+                <div class="span4"></div>
             </div>
             <% end_with %>
             <% end_if %>
@@ -28,8 +29,8 @@
                 <div class="span12">
                     <div class="row-fluid">
                         <div class="span6">
-                            <a href='{$ProfilePhotoUrl}' rel="shadowbox">
-                                $ProfilePhoto
+                            <a href='{$ProfilePhotoUrl}' rel="shadowbox" title="{$FullName}">
+                                $ProfilePhoto(330,650)
                             </a>
                         </div>
                         <div class="span6">&nbsp;</div>
@@ -37,9 +38,10 @@
                 </div>
             </div>
             <div class="row-fluid">
-                <div class="span12">
+                <div class="span8 professor-label">
                     <p><strong>Direción Técnica</strong>: Sensei &nbsp;$FullName - $Graduation DAN</p>
                 </div>
+                <div class="span4"></div>
             </div>
             <% end_with %>
             <% end_if %>
@@ -58,7 +60,7 @@
                 <dl>
                     <% loop News %>
                     <dt <% if First %>class="first"<% end_if %> ></dt>
-                    <dd><a href="{$Link}" class="outbound-link">$Text<a></dd>
+                    <dd><a href="{$Link}" title="{$Tooltip}" class="outbound-link">$Text<a></dd>
                     <% end_loop %>
                 </dl>
             </div>

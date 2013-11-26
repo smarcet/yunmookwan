@@ -17,13 +17,16 @@ class TechniqueHolderPage_Controller extends Page_Controller {
 
     public function technique($request){
         $params = $request->allParams();
-        $id = $params['ID'];
-        $technique = Technique::get()->byID($id);
-        $data = array(
-            'Result' =>$technique,
-            'Title' => $technique->Name
-        );
-        return $this->customise($data);
+        $slug = $params['ID'];
+        $technique = Technique::get()->filter(array('Slug' => $slug))->First();
+        if($technique){
+            $data = array(
+                'Result' =>$technique,
+                'Title' => $technique->Name
+            );
+            return $this->customise($data);
+        }
+        return $this->customise(array());
     }
 
     public function init() {
@@ -35,5 +38,11 @@ class TechniqueHolderPage_Controller extends Page_Controller {
     public function getTechniques(){
         $groups = TechniqueGroup::get()->filter(array('ParentID'=>'0'));
         return $groups;
+    }
+
+    public function getTechniqueUrl(){
+        $link = $this->Link;
+        $link .= "/tecnicas/technique";
+        return $link;
     }
 }

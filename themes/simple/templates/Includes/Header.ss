@@ -14,10 +14,10 @@
                 <div class="fb-like" data-href="{$SiteConfig.GlobalDomain}" data-width="100" data-layout="button_count" data-show-faces="true" data-send="true"></div>
                 <div class="social-links">
                     <a href="https://twitter.com/intent/tweet?hashtags=namsungchoi,yunmookwan,taekwondo&text=%23namsungchoi+Pagina+Oficial+de+Yun+Moo+Kwan&url={$SiteConfig.GlobalDomain}" target="_blank">
-                        <img src="/{$ThemeDir}/images/icon-twitter.png" width="40" height="40" alt="twitter">
+                        <img style="width: 40px;height: 40px" src="/{$ThemeDir}/images/icon-twitter.png" width="40" height="40" alt="twitter">
                     </a>
                     <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]={$SiteConfig.GlobalDomain}&p[images][0]={$SiteConfig.GlobalDomain}/{$ThemeDir}/images/logo.png&p[title]=Pagina+Oficial+de+Yun+Moo+Kwan" target="_blank">
-                        <img src="/{$ThemeDir}/images/icon-facebook.png" width="40" height="40" alt="facebook">
+                        <img style="width: 40px;height: 40px" src="/{$ThemeDir}/images/icon-facebook.png" width="40" height="40" alt="facebook">
                     </a>
                 </div>
 			</div>

@@ -17,13 +17,13 @@ class GalleryImage extends DataObject {
     // One-to-one relationship with gallery page
     public static $has_one = array(
         'Image' => 'BetterImage',
-        'Parent'=>'OneTimeTrainingClass'
+        //'Parent'=>'OneTimeTrainingClass'
     );
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
         $fields->removeFieldFromTab("Root.Main","SortOrder");
-        $fields->removeFieldFromTab("Root.Main","ParentID");
+        //$fields->removeFieldFromTab("Root.Main","ParentID");
         return $fields;
     }
 
@@ -47,12 +47,5 @@ class GalleryImage extends DataObject {
         }
     }
 
-    public function BootstrapPic(){
-        $img = $this->Image();
-        $theme = SSViewer::current_theme();
-        if(isset($img) && Director::fileExists($img->Filename) && $img->exists()){
-            //$img= $img->SetRatioSize(300,250);
-            return "<img alt='{$this->Title}_pic' src='{$img->getURL()}'  data-url='{$img->getURL()}' class='img-polaroid' title='{$this->Title}' />";
-        }
-    }
+
 }

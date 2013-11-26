@@ -21,15 +21,15 @@ es_AR:
   TrainingClass:
     When.Name: Cuando
     Where.Name: Donde
-    Professor.FullName: Sabom
+    Professor.FullName: Profesor
     SINGULARNAME: Clase Entrenamiento
     PLURALNAME: Clases Entrenamiento
-    Child: Chicos
+    Child: Infantil
     Adult: Adultos
   OneTimeTrainingClass:
-    SINGULARNAME: Clase Dan
-    PLURALNAME: Clases Dan
+    SINGULARNAME: Clase Especial
+    PLURALNAME: Clases Especiales
   Professor:
-    Director: Kwan Yang Nim
+    Director: Director
     TechAdviser: Consejero Tecnico
-    Instructor: Sabon Nin
+    Instructor: Instructor

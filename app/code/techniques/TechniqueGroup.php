@@ -14,6 +14,17 @@ class TechniqueGroup  extends DataObject {
         'Description' => 'HTMLText'
     );
 
+    function getCMSValidator()
+    {
+        return $this->getValidator();
+    }
+
+    function getValidator()
+    {
+        $validator= new RequiredFields(array('Name','SubName'));
+        return $validator;
+    }
+
     static $field_labels = array(
         'Name' => 'Nombre',
         'SubName' => 'Subtitulo',

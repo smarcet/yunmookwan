@@ -19,7 +19,7 @@ Change it, enhance it and most importantly enjoy it!
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="google-site-verification" content="{$SiteConfig.GoogleVerificationCode}" />
-    <meta property="og:image" content="{$SiteConfig.GlobalDomain}/{$ThemeDir}/images/logo.png" />
+    <meta property="og:image" content="{$SiteConfig.GlobalDomain}/{$ThemeDir}/images/logo_large.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="224" />
     <meta property="og:image:height" content="272" />

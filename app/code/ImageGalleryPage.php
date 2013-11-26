@@ -6,14 +6,14 @@
  * Time: 9:15 PM
  */
 
-class ImageGalleryPage extends Page{
+class ImageGalleryPage extends Page {
 
     public static $db = array(
         'ShowFBComments'=>'Boolean',
     );
 
     static $has_many = array(
-        'Images' => 'GalleryImage',
+        'Images' => 'ImageGalleryPageImage',
         'Videos' => 'YouTubeVideo',
     );
 

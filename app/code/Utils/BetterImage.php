@@ -14,16 +14,10 @@
 class BetterImage extends Image
 {
 
-    public function __construct($record = null, $isSingleton = false, $model = null){
-        parent::__construct($record, $isSingleton, $model);
-        $this->SetWidth(1600);
-    }
-
     public function SetWidth($width) {
         if($width == $this->getWidth()){
             return $this;
         }
-
         return parent::SetWidth($width);
     }
 

@@ -21,6 +21,18 @@ class TrainingDay extends DataObject  {
         'EndTime'
     );
 
+    function getCMSValidator()
+    {
+        return $this->getValidator();
+    }
+
+    function getValidator()
+    {
+        $validator= new RequiredFields(array('Day','StartTime','EndTime'));
+        return $validator;
+    }
+
+
     static $has_many = array(
         'TrainingClasses' => 'TrainingClass'
     );
@@ -48,7 +60,7 @@ class TrainingDay extends DataObject  {
 
     public function getName(){
         $day = _t('TrainingDay.'.$this->Day, $this->Day);
-        return $day .' - '.$this->StartTime.' - '.$this->EndTime;
+        return $day .' ('.$this->StartTime.' Hs./ '.$this->EndTime.'Hs. )';
     }
 
     function fieldLabels($includerelations = true){

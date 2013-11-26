@@ -36,12 +36,10 @@ class Page_Controller extends ContentController {
 		// Note: you should use SS template require tags inside your templates 
 		// instead of putting Requirements calls here.  However these are 
 		// included so that our older themes still work
-		Requirements::themedCSS('reset');
+
 		Requirements::themedCSS('bootstrap.min');
-		Requirements::themedCSS('typography'); 
-		Requirements::themedCSS('form');
-        Requirements::themedCSS('layout');
-        Requirements::themedCSS('magnific-popup');
+        Requirements::themedCSS('base');
+	    Requirements::themedCSS('magnific-popup');
 
 
         $theme_folder = SSViewer::get_theme_folder();

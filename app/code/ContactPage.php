@@ -1,8 +1,9 @@
 <?php
 class ContactPage extends Page{
 	static $db = array(
-			'Mailto' => 'Varchar(100)',
-			'SubmitText' => 'Text'
+			'Mailto'     => 'Varchar(100)',
+			'SubmitText' => 'Text',
+            'Subject'    =>'Text'
 	);
 	 
 	function getCMSFields() {
@@ -10,6 +11,7 @@ class ContactPage extends Page{
 		 
 		$fields->addFieldToTab("Root.Configuracion", new EmailField('Mailto', 'Correo de Contacto'));
 		$fields->addFieldToTab("Root.Configuracion", new TextareaField('SubmitText', 'Texto a mostrar al enviar'));
+        $fields->addFieldToTab("Root.Configuracion", new TextareaField('Subject', 'Asunto'));
 		 
 		return $fields;
 	}
@@ -47,9 +49,9 @@ class ContactPage_Controller extends Page_Controller {
     	$data['Name'] = filter_var($data['Name'], FILTER_SANITIZE_SPECIAL_CHARS);
 
         $new_contact = new ContactEmail();
-        $new_contact->Email =$data['Email'] ;
-        $new_contact->Message =$data['Message'] ;
-        $new_contact->Name =$data['Name'] ;
+        $new_contact->Email    = $data['Email'] ;
+        $new_contact->Message  = $data['Message'] ;
+        $new_contact->Name     = $data['Name'] ;
         $new_contact->write();
     	
         $From = $data['Email'];
@@ -60,9 +62,9 @@ class ContactPage_Controller extends Page_Controller {
         	return;
         }
         
-        $To = $this->Mailto;
-        $Subject = "YUN MOO KWAN - Contacto";    
-        $email = new Email($From, $To, $Subject);
+        $To      = $this->Mailto;
+        $Subject = $this->Subject;
+        $email   = new Email($From, $To, $Subject);
         $email->replyTo($From);
         //set template
         $email->setTemplate('ContactEmail');

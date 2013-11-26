@@ -18,13 +18,23 @@ class YouTubeVideo extends  DataObject {
 
     static $has_one = array(
         'Thumbnail' => 'Image',
-        'Parent'=>'OneTimeTrainingClass'
     );
+
+    function getCMSValidator()
+    {
+        return $this->getValidator();
+    }
+
+    function getValidator()
+    {
+        $validator= new RequiredFields(array('VideoId','Title'));
+        return $validator;
+    }
+
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
         $fields->removeFieldFromTab("Root.Main","SortOrder");
-        $fields->removeFieldFromTab("Root.Main","ParentID");
         return $fields;
     }
 

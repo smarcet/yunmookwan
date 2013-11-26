@@ -2,15 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: smarcet
- * Date: 10/31/13
- * Time: 1:47 AM
+ * Date: 11/6/13
+ * Time: 1:22 AM
  */
 
-class TechniqueAdmin extends ModelAdmin  {
-    public static $managed_models = array('TechniqueGroup','Technique');
-    static $url_segment = 'techniques';
-    static $menu_title = 'Tecnicas';
-
+class GlobalAdmin extends ModelAdmin  {
+    public static $managed_models = array('News');
+    static $url_segment = 'global_config';
+    static $menu_title = 'Global';
     static $model_importers = array();
 
     public function getEditForm($id = null, $fields = null) {

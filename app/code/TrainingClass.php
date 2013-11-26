@@ -13,35 +13,54 @@ class TrainingClass extends DataObject {
         'Audience'=>"Enum('Adult, Child', 'Adult')"
     );
 
+    static $has_many = array(
+        'Videos' => 'TrainingClassVideo',
+    );
+
     static $has_one = array(
-        'Where' => 'TrainingPlace',
-        'When' => 'TrainingDay',
-        'Professor'=>'Professor',
-        'Activity'=>'Activity',
+        'Where'     => 'TrainingPlace',
+        'When'      => 'TrainingDay',
+        'Professor' => 'Professor',
+        'Activity'  => 'Activity',
     );
 
     static $defaults = array('Audience' => 'Adult');
 
+    function getCMSValidator()
+    {
+        return $this->getValidator();
+    }
+
+    function getValidator()
+    {
+        $validator= new RequiredFields(array('Where','Professor','Activity','Audience'));
+        return $validator;
+    }
+
+
     public function getCMSFields() {
+
+        //$fields = parent::getCMSFields();
+
         $fields= new FieldList(
-            new DropdownField(
+            $professor = new DropdownField(
                 'ProfessorID',
                 'Profesor',
                 Professor::get()->map('ID', 'FullName')
             ),
-            new DropdownField(
+            $activity = new DropdownField(
                 'ActivityID',
                 'Actividad',
                 Activity::get()->map('ID', 'Name')
             ),
-            new DropdownField(
+            $where = new DropdownField(
                 'WhereID',
                 'Donde',
                 TrainingPlace::get()->map('ID', 'Name')
             ),
-            new DropdownField(
+            $when = new DropdownField(
                 'WhenID',
-                'Cuando',
+                'Horario',
                 TrainingDay::get()->map('ID', 'Name')
             ),
             new DropdownField(
@@ -50,6 +69,10 @@ class TrainingClass extends DataObject {
                 singleton('TrainingClass')->dbObject('Audience')->enumValues()
             )
         );
+        $professor->setEmptyString(' ');
+        $activity->setEmptyString(' ');
+        $where->setEmptyString(' ');
+        $when->setEmptyString(' ');
         return $fields;
     }
 

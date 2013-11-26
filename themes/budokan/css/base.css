@@ -1,0 +1,307 @@
+
+.header {
+    background: #000000; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0NTQ4NGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left, #000000 0%, #45484d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#000000), color-stop(100%,#45484d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #000000 0%,#45484d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #000000 0%,#45484d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #000000 0%,#45484d 100%); /* IE10+ */
+    background: linear-gradient(to right, #000000 0%,#45484d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#45484d',GradientType=1 ); /* IE6-8 */
+}
+
+.header .inner {
+    position: relative;
+    min-height: 72px;
+}
+
+.footer {
+    color: #999;
+    background: #ededed;
+    padding: 20px 0;
+    font-size: 11px;
+    line-height: 22px;
+}
+
+footer a {
+    color: #999;
+}
+
+.footer a:hover {
+    color: #B90000;
+}
+
+.footer .left {
+    float: left;
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer .right {
+    float: right;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer span {
+    padding: 0 3px;
+    color: #bbb;
+}
+
+.footer .primary,.footer .primary ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .primary li {
+    display: inline;
+}
+
+.ie6 .footer .primary li,.ie7 .footer .primary li {
+    /* this is a bugfix for ie6/7 */
+    display: inline;
+    zoom: 1;
+    margin-right: 10px;
+}
+
+.footer .primary li:after {
+    /* adds '/' to separate the footer navigation items */
+    padding: 0 3px 0 5px;
+    content: '/';
+    color: #999;
+}
+
+.footer .primary li:last-child:after {
+    content: '';
+    /* makes sure last nav item doesn't have a '/' following it */
+}
+
+.footer .arrow {
+    padding: 0 8px 0 5px;
+    color: #b80000;
+    font-size: 13px;
+}
+
+.footer .primary .nav-open-button {
+    display: none;
+    /* the footer includes the primary nav include - this makes sure the nav open close button doesn't show up */
+}
+
+.social-links{
+    margin-right:10px ;
+    float:right;
+}
+
+.social-links img{
+    display: inline;
+    float: right;
+    padding-left: 13px;
+    padding-top: 23px;
+}
+
+.fb-like{
+    margin-top:20px;
+    margin-right:10px ;
+    float: right;
+}
+
+#header .row-fluid .span10{
+    overflow: visible;
+}
+
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{
+    left:0px !important;
+}
+
+
+
+.technique-panel{
+    -moz-box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.technique-panel-heading {
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #DDDDDD;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin: -15px -15px 15px;
+    padding: 10px 15px;
+    transparent:0.5;
+}
+
+.technique-holder {
+    /*background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    padding: 15px;
+    opacity:0.9;
+    filter:alpha(opacity=90); */
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin: 26px auto 0;
+    min-height: 300px;
+    padding: 24px;
+    position: relative;
+    opacity:0.9;
+    filter:alpha(opacity=90);
+    z-index: 999;
+}
+
+.technique-holder:before, .technique-holder:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.technique-holder:before {
+    background: #fafafa;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+}
+.technique-holder:after {
+    background: #f6f6f6;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
+}
+
+
+.techniques-list
+{
+    list-style-type: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+.techniques-list li{
+    list-style: none !important;
+    font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+    border-bottom: 1px solid #ccc;
+}
+
+.techniques-list li:last-child {
+    border: none;
+}
+
+.techniques-list li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+.techniques-list li a:hover {
+    font-size: 25px;
+}
+
+
+.logo-container{
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+
+}
+
+
+#logo a{
+    margin-left: 10px;
+    background: url("../images/logo.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    display: block;
+    height: 130px;
+    margin-left: -10px;
+    margin-top: 8px;
+    text-indent: -1000em;
+    width: 120px;
+}
+
+.navbar{
+    margin-bottom: 0 !important;
+}
+
+.jumbotron {
+    color: #FFFFFF;
+    padding: 40px 0;
+    position: relative;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+    padding-bottom: 5px;
+}
+.jumbotron h1 {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.jumbotron p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.jumbotron a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease-in-out 0s;
+}
+.jumbotron a:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+.navbar-fixed-top{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.content-container{
+    margin: 20px;
+}
+
+.main {
+    background-image: url("../images/japan-flag.jpg");
+    background-repeat: repeat-y;
+    background-position:center top;
+    background-attachment: scroll;
+    padding: 40px 0 0;
+    margin-top: 0px;
+    min-height: 750px;
+    width: 100%;
+    opacity: 0.8;
+    filter:alpha(opacity=80);
+}
+
+.inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.ie6 .inner {
+    width: 960px;
+}

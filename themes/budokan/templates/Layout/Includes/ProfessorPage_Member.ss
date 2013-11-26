@@ -56,7 +56,7 @@
                             <div class="span12">
                             <% loop $Children.Sort(Day) %>
                                 <div class="row-fluid">
-                                    <div class="span12">$When.Name
+                                    <div class="span12"><b>$Activity.Name</b> -  $When.Name
                                         <% if $Audience!='Adult' %>
                                             <b>($Audiencei18n)</b>
                                         <% end_if %>

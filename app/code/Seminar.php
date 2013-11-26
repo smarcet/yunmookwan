@@ -15,14 +15,24 @@ class Seminar extends  OneTimeTrainingClass {
         'To'=>'Date'
     );
 
+    function getCMSValidator()
+    {
+        return $this->getValidator();
+    }
+
+    function getValidator()
+    {
+        $validator= new RequiredFields(array('Title','Text','To','Date'));
+        return $validator;
+    }
+
+
     // One-to-one relationship with gallery page
     public static $has_one = array(
         'Flier' => 'BetterImage',
     );
 
-    static $has_many = array(
-        'Videos' => 'YouTubeVideo',
-    );
+
 
     public static $casting = array(
         "WhenFull" => 'Text',
@@ -77,15 +87,17 @@ class Seminar extends  OneTimeTrainingClass {
 
         $fields->add(new CheckboxField("ShowFBComments",'Activar Comentarios'));
 
-        $gridFieldConfigImages = GridFieldConfig_RecordEditor::create();
-        $gridFieldConfigImages->addComponent(new GridFieldSortableRows('SortOrder'));
-        $images = new GridField("Images", "Galeria de Imagenes", $this->Images()->sort("SortOrder"), $gridFieldConfigImages);
-        $fields->add($images);
+        if($this->ID>0){
+            $gridFieldConfigImages = GridFieldConfig_RecordEditor::create();
+            $gridFieldConfigImages->addComponent(new GridFieldSortableRows('SortOrder'));
+            $images = new GridField("Images", "Galeria de Imagenes", $this->Images()->sort("SortOrder"), $gridFieldConfigImages);
+            $fields->add($images);
 
-        $gridFieldConfigVideos = GridFieldConfig_RecordEditor::create();
-        $gridFieldConfigVideos->addComponent(new GridFieldSortableRows('SortOrder'));
-        $videos = new GridField("Videos", "Galeria de Videos", $this->Videos()->sort("SortOrder"), $gridFieldConfigVideos);
-        $fields->add($videos);
+            $gridFieldConfigVideos = GridFieldConfig_RecordEditor::create();
+            $gridFieldConfigVideos->addComponent(new GridFieldSortableRows('SortOrder'));
+            $videos = new GridField("Videos", "Galeria de Videos", $this->Videos()->sort("SortOrder"), $gridFieldConfigVideos);
+            $fields->add($videos);
+        }
 
         return $fields;
     }

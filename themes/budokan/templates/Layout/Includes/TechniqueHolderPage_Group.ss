@@ -1,4 +1,3 @@
-
 $Name - $SubName
 <% if ChildGroups %>
     <ul class="techniques-list">
@@ -13,7 +12,7 @@ $Name - $SubName
 <ul class="techniques-list">
     <% loop ChildTechniques %>
     <li>
-        <a href="{$Top.Link}/tecnicas/technique/{$ID}">$Name</a>
+        <a href="$Top.Link/tecnicas/technique/{$Slug}">$Name</a>
     </li>
     <% end_loop %>
 </ul>

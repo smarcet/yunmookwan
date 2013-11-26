@@ -17,4 +17,16 @@ class News extends DataObject{
     static $summary_fields = array(
         'Text',
     );
+
+    function getCMSValidator()
+    {
+        return $this->getValidator();
+    }
+
+    function getValidator()
+    {
+        $validator= new RequiredFields(array('Text','Link'));
+        return $validator;
+    }
+
 }
