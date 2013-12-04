@@ -26,7 +26,7 @@ class Exam extends OneTimeTrainingClass {
     }
 
     static $has_many = array(
-        'Videos' => 'YouTubeVideo',
+        'Videos' => 'ExamVideo',
     );
 
     public function getCMSFields() {

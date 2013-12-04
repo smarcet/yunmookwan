@@ -39,6 +39,7 @@ class Page_Controller extends ContentController {
 
 		Requirements::themedCSS('bootstrap.min');
         Requirements::themedCSS('base');
+        Requirements::themedCSS('docs');
 	    Requirements::themedCSS('magnific-popup');
 
 

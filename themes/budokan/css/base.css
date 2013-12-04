@@ -20,7 +20,6 @@
 .footer {
     color: #999;
     background: #ededed;
-    padding: 20px 0;
     font-size: 11px;
     line-height: 22px;
 }
@@ -94,13 +93,13 @@ footer a {
 .social-links{
     margin-right:10px ;
     float:right;
+    margin-bottom: 10px;
 }
 
 .social-links img{
     display: inline;
     float: right;
-    padding-left: 13px;
-    padding-top: 23px;
+
 }
 
 .fb-like{
@@ -114,7 +113,6 @@ footer a {
 }
 
 .fb_edge_widget_with_comment span.fb_send_button_form_widget{
-    left:0px !important;
 }
 
 
@@ -186,8 +184,6 @@ footer a {
 .techniques-list
 {
     list-style-type: none !important;
-    margin: 0;
-    padding: 0;
 }
 
 .techniques-list li{

@@ -1,52 +1,52 @@
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span6">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
             <% if DirectorProfessor %>
             <% with DirectorProfessor %>
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="row-fluid">
-                        <div class="span6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
                             <a href='{$ProfilePhotoUrl}' rel="shadowbox" title="{$FullName}">
                                 $ProfilePhoto(330,650)
                             </a>
                         </div>
-                        <div class="span6">&nbsp;</div>
+                        <div class="col-md-6">&nbsp;</div>
                     </div>
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span8 professor-label">
+            <div class="row">
+                <div class="col-md-8 professor-label">
                     <p><strong>Maestro Fundador</strong> : <span class="st"><em>O-Sensei</em></span>&nbsp;$FullName</p>
                 </div>
-                <div class="span4"></div>
+                <div class="col-md-4"></div>
             </div>
             <% end_with %>
             <% end_if %>
             <% if TechAdviserProfessor %>
             <% with TechAdviserProfessor %>
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="row-fluid">
-                        <div class="span6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
                             <a href='{$ProfilePhotoUrl}' rel="shadowbox" title="{$FullName}">
                                 $ProfilePhoto(330,650)
                             </a>
                         </div>
-                        <div class="span6">&nbsp;</div>
+                        <div class="col-md-6">&nbsp;</div>
                     </div>
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span8 professor-label">
+            <div class="row">
+                <div class="col-md-8 professor-label">
                     <p><strong>Direción Técnica</strong>: Sensei &nbsp;$FullName - $Graduation DAN</p>
                 </div>
-                <div class="span4"></div>
+                <div class="col-md-4"></div>
             </div>
             <% end_with %>
             <% end_if %>
         </div>
-        <div class="span6">
+        <div class="col-md-6">
             <div>
                 <% if Headquarter %>
                 <% with Headquarter %>
